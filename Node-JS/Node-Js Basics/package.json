@@ -1,0 +1,11 @@
+{
+  "name": "basicnodejs",
+  "version": "1.0.0",
+  "description": "created by sarthak",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sarthak Parikh",
+  "license": "ISC"
+}
