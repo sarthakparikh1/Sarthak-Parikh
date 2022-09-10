@@ -3,30 +3,24 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  styleUrls: ['./login-page.component.css'],
 })
 export class LoginPageComponent implements OnInit {
+  LoginFormGroup: FormGroup = new FormGroup({
+    userName: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+  });
 
-  LoginFormGroup:FormGroup = new FormGroup({
-    userName: new FormControl('',Validators.required),
-    password:new FormControl('',Validators.required)
+  constructor() {}
 
-  })
+  ngOnInit(): void {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onLoginButtonClick() {
+    if (this.LoginFormGroup.valid) {
+    } else {
+      alert('Enter Valid Details');
+    }
   }
-
-
-onLoginButtonClick(){
-
-}
-onForgortPasswordCuttonClick(){
-
-}
-onRegesterButtonClick(){
-  
-}
-
+  onForgortPasswordCuttonClick() {}
+  onRegesterButtonClick() {}
 }
